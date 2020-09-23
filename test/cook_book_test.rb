@@ -40,8 +40,6 @@ class CookBookTest < Minitest::Test
     ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
     ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
 
-    require "pry"; binding.pry
-
     recipe1.add_ingredient(ingredient1, 2)
     recipe1.add_ingredient(ingredient2, 8)
 
