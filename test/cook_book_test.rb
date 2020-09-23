@@ -28,8 +28,6 @@ class CookBookTest < Minitest::Test
   end
 
   def test_cookbook_ingredients
-    pantry= Pantry.new
-
     cookbook = CookBook.new
 
     recipe1 = Recipe.new("Mac and Cheese")
