@@ -30,4 +30,9 @@ class CookBook
   def date
     Date.today.strftime("%m-%d-%Y")
   end
+
+  def summary
+    @recipes.map do |recipe|
+      {:name => recipe.name, :details=> }
+  end
 end
