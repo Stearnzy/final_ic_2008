@@ -20,4 +20,9 @@ class Recipe
 
     @total_calories += (ingredient.calories * quantity)
   end
+
+  def ingredient_details(recipe)
+    recipe.ingredients.map do |ing|
+      {:ingredient => ingredient.name, :amount => }
+  end
 end
