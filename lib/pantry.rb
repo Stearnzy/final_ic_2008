@@ -12,4 +12,19 @@ class Pantry
   def restock(ingredient, quantity)
     @stock[ingredient] += quantity
   end
+
+  def enough_ingredients_for?(recipe)
+    ing_list_complete =recipe.ingredients.map do |ing|
+      if self.stock_check(ing) < recipe.ingredients_required[ing]
+        false
+      elsif self.stock_check(ing) >= recipe.ingredients_required[ing]
+        true
+      end
+    end
+    if ing_list_complete.all?
+      true
+    else
+      false
+    end
+  end
 end
